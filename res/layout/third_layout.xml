@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+ <ImageButton
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/myrecordoption"
+     android:src="@drawable/firstopt1"
+     android:layout_marginTop="50dp"
+     android:layout_marginLeft="40dp"
+     android:layout_centerHorizontal="true"
+     android:onClick="myrecordClick"
+     android:visibility="invisible"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myfilesoption"
+        android:src="@drawable/firstopt2"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/myrecordoption"
+        android:onClick="myfilesClick"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/doctornearbyoption"
+        android:src="@drawable/firstopt3"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/myfilesoption"
+        android:onClick="doctornearbyClick"
+        android:visibility="invisible"/>
+
+
+
+</RelativeLayout>

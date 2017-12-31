@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abc.heartratetry.HeartRateChecker">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/id_preview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" />
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/id_imageprogress"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="10dp"
+    android:src="@drawable/progressrep10p"
+    android:visibility="invisible"
+    />
+    <TextView
+        android:id="@+id/id_tv_heart_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_weight="1"
+        android:text="@string/show"
+        android:visibility="invisible">
+    </TextView>
+
+    <TextView
+        android:id="@+id/id_tv_Avg_Pixel_Values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_weight="1"
+        android:text="@string/show"
+        android:visibility="invisible">
+    </TextView>
+
+    <TextView
+        android:id="@+id/id_tv_pulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_weight="1"
+        android:text="@string/show"
+        android:visibility="invisible">
+    </TextView>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/processingtext"
+    android:text="Processing ... "
+    android:textColor="@android:color/holo_green_dark"
+   android:visibility="visible"
+    android:layout_marginLeft="130dp"
+    android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <TextView
+                android:id="@+id/heartrate_valuepr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:text="Heart Rate:"
+                android:textColor="@android:color/holo_red_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="invisible"
+                />
+
+    <TextView
+        android:id="@+id/heartrate_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@android:color/holo_blue_dark"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible"
+       />
+            <TextView
+                android:id="@+id/checkaccuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Values:"
+                android:textColor="@android:color/holo_green_dark"
+
+                android:visibility="visible"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/beforesave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Status:"
+                android:textColor="@android:color/holo_green_dark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="invisible"
+                android:layout_marginTop="20dp"
+                />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:visibility="invisible"
+        android:id="@+id/radiogroupforStatus"
+        android:layout_marginTop="5dp"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="After Exercise"
+            android:id="@+id/rbforstatus1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rest"
+            android:id="@+id/rbforstatus2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:id="@+id/rbforstatus3" />
+    </RadioGroup>
+
+
+
+            <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:visibility="invisible"
+        android:id="@+id/buttonforSave"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+android:onClick="saveHR"
+        />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check Calories burned"
+                android:visibility="visible"
+                android:id="@+id/buttonforcalorie"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:onClick="calculateCB"
+                />
+
+
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
